@@ -1,9 +1,14 @@
-html {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
+  font-family: roboto;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -619,4 +624,4 @@ pre tt:after {
   html {
     font-size: 100%;
   }
-}
+} */
