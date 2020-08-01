@@ -3,7 +3,6 @@ import useSiteMetadata from "../hooks/useSiteMetadata"
 
 const Contact = () => {
   const {
-    email,
     social: { twitter, instagram, github },
   } = useSiteMetadata()
 
