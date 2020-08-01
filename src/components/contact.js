@@ -6,7 +6,7 @@ const Contact = () => {
     email,
     social: { twitter, instagram, github },
   } = useSiteMetadata()
-  console.log(email)
+
   return (
     <section className="text-gray-700 body-font relative">
       <div className="container px-5 py-24 mx-auto">
@@ -22,6 +22,7 @@ const Contact = () => {
         </div>
         <div className="lg:w-1/2 md:w-2/3 mx-auto">
           <form
+            name="contact"
             method="POST"
             data-netlify="true"
             className="flex flex-wrap -m-2"
