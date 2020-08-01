@@ -1,4 +1,4 @@
-import React from "react"
+import {useState}, React from "react"
 import useSiteMetadata from "../hooks/useSiteMetadata"
 
 const Contact = () => {
