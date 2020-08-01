@@ -7,6 +7,22 @@ const Contact = () => {
     social: { twitter, instagram, github },
   } = useSiteMetadata()
 
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+
+  const handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: formEncode({ "form-name": "contact", email, name, message }),
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error))
+
+    e.preventDefault()
+  }
+
   return (
     <section className="text-gray-700 body-font relative">
       <div className="container px-5 py-24 mx-auto">
@@ -34,6 +50,7 @@ const Contact = () => {
                 type="text"
                 name="name"
               />
+              <input type="hidden" name="form-name" value="contact" />
             </div>
             <div className="p-2 w-1/2">
               <input
